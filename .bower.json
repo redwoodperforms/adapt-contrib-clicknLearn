@@ -1,0 +1,33 @@
+{
+  "name": "adapt-contrib-clickAndLearn",
+  "framework": "^2.0.0",
+  "version": "2.0.0",
+  "homepage": "https://github.com/ExultCorp/adapt-contrib-clickAndLearn",
+  "issues": "https://github.com/ExultCorp/adapt-contrib-clickAndLearn/issues",
+  "repository": "git://github.com/ExultCorp/adapt-contrib-clickAndLearn.git",
+  "authors": [
+    "Himanshu Rajotia <himanshu.rajotia@exultcorp.com>"
+  ],
+  "description": "Click and Learn Template developed by Exult Corporation for Adapt Framework v2.x.x.",
+  "main": "/js/adapt-contrib-clickAndLearn.js",
+  "displayName": "ClickAndLearn",
+  "component": "clickAndLearn",
+  "assetFields": [
+    "_items[].imageSrc"
+  ],
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPLv3",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.0",
+    "commit": "73a854a8d687d06252601ce1100325e4f806cdb1"
+  },
+  "_source": "git://github.com/ExultCorp/adapt-contrib-clickAndLearn.git",
+  "_target": "2.0.0",
+  "_originalSource": "adapt-contrib-clickAndLearn",
+  "_direct": true
+}
