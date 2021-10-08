@@ -1,0 +1,279 @@
+.clickandlearn {
+
+  .clickAndLearn-widget {
+     
+    .clickAndLearn-navContainer {
+      list-style: none;
+
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+
+      .clickAndLearn-indicator {
+        background-color: @item-color;
+        list-style: none;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+
+        &.clickAndLearn-indicatorActive {
+          background-color: darken(@item-color,40%);
+        }
+      }
+    }
+
+    &.clickAndLearn-horizontal {
+
+      .clickAndLearn-navContainer {
+        li {
+          display: inline-block;
+          margin-bottom: 3px;
+          margin-left: 0px;
+        }
+      }
+
+      .clickAndLearn-tabViewContainer {
+        margin-top: 5px;
+      }
+    }
+
+    &.clickAndLearn-vertical {
+
+      .clickAndLearn-navContainer {
+        display: inline-block;
+        width: 50%;
+        margin-right: 5px;
+
+        li {
+          margin-bottom: 3px;
+          margin-left: 0px;
+
+          button {
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .clickAndLearn-tabViewContainer {
+        display: inline-flex;
+        margin-bottom: 3px;   
+        max-width: 48%;
+          @media(max-width:@device-width-medium){
+              max-width: 100%;
+          }
+        height: auto;
+        vertical-align: top;
+
+        .clickAndLearn-tabItem {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .clickAndLearn-tabViewContainer {
+    .clickAndLearn-tabItem {
+      width: auto;
+      display: none;
+      background-color: @item-color;
+      padding: @item-padding;
+      color: @item-color-inverted;
+    }
+
+    .clickAndLearn-tabItem:after {
+      margin-left:@item-padding;
+    }
+
+    .clickAndLearn-tabView-title {
+      display: block;
+      margin-top: 5px;
+      font-size: 20px;
+    }
+
+    .clickAndLearn-tabView-body {
+      display: block;
+      margin-top: 5px;
+      font-size: @body-size;
+    
+    }
+  }
+
+  .clickAndLearn-popup {
+    height: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    background-color: @background-inverted;
+    color: @font-color-inverted;
+    border: 3px solid @item-color-hover;
+
+    .clickAndLearn-popup-inner {
+      padding: @item-padding;
+
+      .clickAndLearn-popup-toolbar-title {
+        width: 80%;
+        margin-bottom: 10px;
+        float: left;
+      }
+
+      .clickAndLearn-popup-body {
+        overflow-y: auto;
+      }
+
+      .clickAndLearn-popup-close {
+        display: inline-block;
+        float: right;
+        color: @item-color;
+        .icon {
+          color: @item-color-inverted;
+        }
+      }
+    }
+  }
+
+}
+
+.no-touch {
+  .clickAndLearn-navContainer {
+    .clickAndLearn-indicator:hover {
+      cursor: pointer;
+      background-color: @visited;
+    }
+  }
+
+  .clickAndLearn-popup-close {
+    .icon:hover {
+      color: lighten(@item-color-inverted, 30%);
+    }
+  }
+}
+
+@media (max-width: 774px) {
+
+  .clickandlearn {
+    .clickAndLearn-widget {
+      &.clickAndLearn-vertical {
+        .clickAndLearn-navContainer {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+}
+
+
+.display-none{
+  display: none !important;
+}
+
+.clickandlearn{
+  img{
+    max-width: 200px;
+  }
+}
+
+.clickAndLearn-widget {
+  display:flex;
+  @media(max-width:@device-width-medium){
+  display:block;
+}
+}
+
+@-webkit-keyframes bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}
+
+.animator {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
